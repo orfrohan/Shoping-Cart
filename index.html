@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- stylecss -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="iphone-part clearfix">
+          <div class="left">
+            <img src="i-font.jpg" alt="Iphone" />
+          </div>
+          <div class="left iphone-text">
+            <h3 class="iphone-128">iphone 128gb black</h3>
+          </div>
+          <div class="left">
+            <div class="left-button">
+              <button onclick="handleProductChange('phone',false)"><i class="fas fa-minus"></i></button>
+              <input type="text" value="1" id="phoneCount" />
+              <button onclick="handleProductChange('phone',true)"><i class="fas fa-plus"></i></button>
+
+              <h5 id="phonePrice">$1219</h5>
+            </div>
+          </div>
+        </div>
+        <div class="iphone-part">
+          <div class="left">
+            <img src="i-back.jpg" alt="Iphone" />
+          </div>
+          <div class="left iphone-text">
+            <h3 class="iphone-128">iphone 128gb Case-black</h3>
+          </div>
+          <div class="left">
+            <div class="left-button">
+              <button onclick="handleProductChange('case',false)" id="caseDecrease"><i class="fas fa-minus"></i></button>
+              <input type="text" value="1"  id="caseCount"/>
+              <button id="caseIncrease" onclick="handleProductChange('case',true)"><i class="fas fa-plus"></i></button>
+              <h5 id="casePrice">$59</h5>
+            </div>
+          </div>
+        </div>
+        <div class=" clearfix amountPart">
+          <div class="written left">
+            <h4>Subtotal:</h5>
+            <h4>Tax:</h5>
+            <h4>Total:</h5>
+          </div>
+          <div class="amount left">
+            <h4 id="subTotal">$1,278</h5>
+            <h4 id="taxAmount">$0</h5>
+            <h4 id="total">$1,278</h5>
+          </div>
+        </div>
+        <button class="right">Checkout</button>
+      </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
